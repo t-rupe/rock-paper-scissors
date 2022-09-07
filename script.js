@@ -23,9 +23,10 @@ function playRound(playerSelection, computerSelection) {
         return 'You Win! Scissors beats Paper';
     } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'scissors') {
         return 'Tie! Try again';   
+    } else {
+        return 'invalid choice: please choose either "rock" "paper" or "scissors"';
     }
 }
 const playerSelection = prompt('rock, paper, or scissors?');
 const computerSelection = getComputerChoice();
-console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
