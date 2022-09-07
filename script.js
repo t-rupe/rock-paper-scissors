@@ -35,4 +35,19 @@ function game() {
 }
 
 function score(result) {
-  if (result ===)
+  if (result == playerWinRound) {
+    playerScore++;
+  } else if (result == tie) {
+    ties++;
+  } else {
+    computerScore++;
+  }
+
+  if (playerScore == 5) {
+    console.log(playerWon);
+    return;
+  }
+  if (computerScore == 5) {
+    console.log(computerWon);
+    return;
+  }
